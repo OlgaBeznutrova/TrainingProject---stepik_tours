@@ -21,3 +21,6 @@ urlpatterns = [
     path("departure/<str:departure>/", tours_views.departure_view),
     path("tour/<int:id>/", tours_views.tour_view),
 ]
+
+handler404 = tours_views.custom_handler404
+handler500 = tours_views.custom_handler500
