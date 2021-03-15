@@ -11,7 +11,7 @@ def departure_view(request, departure):
     return render(request, "tours/departure.html")
 
 
-def tour_view(request, id):
+def tour_view(request, tour_id):
     return render(request, "tours/tour.html")
 
 
