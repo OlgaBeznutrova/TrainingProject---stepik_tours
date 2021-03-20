@@ -1,8 +1,5 @@
 from django.urls import path
 
-import settings
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
-
 import tours.views as tours_views
 
 urlpatterns = [
