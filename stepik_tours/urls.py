@@ -14,7 +14,3 @@ urlpatterns = [
 
 handler404 = tours_views.custom_handler404
 handler500 = tours_views.custom_handler500
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += staticfiles_urlpatterns()
