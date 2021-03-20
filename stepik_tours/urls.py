@@ -1,5 +1,8 @@
 from django.urls import path
 
+import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
+
 import tours.views as tours_views
 
 urlpatterns = [
@@ -11,3 +14,7 @@ urlpatterns = [
 
 handler404 = tours_views.custom_handler404
 handler500 = tours_views.custom_handler500
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += staticfiles_urlpatterns()
